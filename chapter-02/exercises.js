@@ -13,27 +13,43 @@ function triangles(height) {
 // fizzBuzz ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function fizzBuzz() {
-  for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log('FizzBuzz');
-    } else if (i % 3 === 0) {
-      console.log('Fizz');
+function fizzBuzz(start, end) {
+  for (let i = start; i <= end; i++) {
+    if (i % 3 === 0  && i % 5 === 0) {
+        console.log('fizzbuzz');
     } else if (i % 5 === 0) {
-      console.log('Buzz');
+        console.log('buzz');
+    } else if (i % 3 === 0) {
+        console.log('fizz')
     } else {
-      console.log(i);
+        console.log(i)
     }
   }
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard() {
+function drawChessboard(size) {
+ 
+    let board = "";
+  
+    for (let y = 0; y < size; y++) {
+      for (let x = 0; x < size; x++) {
+        if ((x + y) % 2 == 0) {
+          board += " ";
+        } else {
+          board += "#";
+        }
+      }
+      board += "\n";
+    }
+  
+    console.log(board);
+  }
 
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

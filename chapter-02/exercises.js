@@ -3,11 +3,13 @@
 // triangles ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function triangles(height) {
-    for (let string = "#"; string.length <= height; string += "#") {
-      console.log(string);
-    }
+function triangles(num) {
+  line = ''; // Start with an empty string
+  for (let i = 0; i < num; i++) {
+    line += '#'; // Add a hash to the string
+    console.log(line); // Log the current string
   }
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // fizzBuzz ////////////////////////////////////////////////////////////////////
@@ -15,41 +17,25 @@ function triangles(height) {
 
 function fizzBuzz(start, end) {
   for (let i = start; i <= end; i++) {
-    if (i % 3 === 0  && i % 5 === 0) {
-        console.log('fizzbuzz');
-    } else if (i % 5 === 0) {
-        console.log('buzz');
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz");
     } else if (i % 3 === 0) {
-        console.log('fizz')
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
     } else {
-        console.log(i)
+      console.log(i);
     }
   }
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard(size) {
- 
-    let board = "";
+function drawChessBoard (size) {
   
-    for (let y = 0; y < size; y++) {
-      for (let x = 0; x < size; x++) {
-        if ((x + y) % 2 == 0) {
-          board += " ";
-        } else {
-          board += "#";
-        }
-      }
-      board += "\n";
-    }
-  
-    console.log(board);
-  }
-
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
